@@ -28,10 +28,10 @@ public class Register extends AsyncTask<String, Void, Response> {
     protected Response doInBackground(String... strings) {
         JSONObject jsonObject = new JSONObject();
         try{
-            jsonObject.put("name", strings[0]);
-            jsonObject.put("password", strings[1]);
-            jsonObject.put("email", strings[2]);
-            jsonObject.put("telp", strings[2]);
+            jsonObject.put("pengguna", strings[0]);
+            jsonObject.put("email", strings[1]);
+            jsonObject.put("password", strings[2]);
+            jsonObject.put("telp", strings[3]);
 
         } catch (Exception e){
             e.printStackTrace();

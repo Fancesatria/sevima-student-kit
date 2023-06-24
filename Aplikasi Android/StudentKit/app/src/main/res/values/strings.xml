@@ -11,12 +11,12 @@
     <string name="unmatch">Password unmatch</string>
     <string name="is_email">Please input a valid email</string>
 
-    <string name="pw_success">Password uodated</string>
+    <string name="pw_success">Password updated</string>
     <string name="pw_failed">Password cannot be saved</string>
     <string name="no_data">There is no data to show</string>
 
     <string name="empty">Field cannot be empty</string>
-    <string name="del_ensure">Delete this item ?</string>
-    <string name="logout_ensure">Wanna logout and delete all data ?</string>
+    <string name="del_ensure">Delete this item\?</string>
+    <string name="logout_ensure">Wanna logout and delete all data\?</string>
     <string name="title_activity_detail_event">DetailEventActivity</string>
 </resources>

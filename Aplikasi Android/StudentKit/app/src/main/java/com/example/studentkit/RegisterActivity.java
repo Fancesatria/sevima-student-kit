@@ -2,6 +2,7 @@ package com.example.studentkit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -66,5 +67,9 @@ public class RegisterActivity extends AppCompatActivity {
             r.execute(bind.username.getText().toString(), bind.email.getText().toString(),
             bind.password.getText().toString(), bind.telp.getText().toString());
         }
+    }
+
+    public void login(View view) {
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

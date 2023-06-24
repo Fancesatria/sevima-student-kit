@@ -50,12 +50,14 @@ public class Login extends AsyncTask<String, Void, Response> {
         } else{
             try {
                 JSONObject jsonObject= new JSONObject(response.data);
-
+                JSONObject j = (JSONObject) jsonObject.get("data");
+                Log.d("token", j.getString("token"));
                 SPHelper sp = new SPHelper(context);
-                sp.setToken(jsonObject.getString("token"));
-                sp.setEmail(jsonObject.getString("email"));
-                sp.setUsername(jsonObject.getString("name"));
-                sp.setTelp(jsonObject.getString("phoneNumber"));
+                sp.setToken(j.getString("token"));
+                sp.setEmail(j.getString("email"));
+                sp.setUsername(j.getString("pengguna"));
+                sp.setTelp(j.getString("telp"));
+
                 context.startActivity(new Intent(context, MainActivity.class));
                 Toast.makeText(context, "Login Berhasil", Toast.LENGTH_SHORT).show();
 
