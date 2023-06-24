@@ -17,6 +17,7 @@ import org.json.JSONObject;
 
 public class Login extends AsyncTask<String, Void, Response> {
     String url = "http://192.168.47.126:8000/api/pengguna/login";
+    public static int iduser;
     ActivityLoginBinding bind;
     Context context;
     public static String token;
@@ -54,9 +55,12 @@ public class Login extends AsyncTask<String, Void, Response> {
                 Log.d("token", j.getString("token"));
                 SPHelper sp = new SPHelper(context);
                 sp.setToken(j.getString("token"));
+                sp.setIdPengguna(j.getInt("id"));
                 sp.setEmail(j.getString("email"));
                 sp.setUsername(j.getString("pengguna"));
                 sp.setTelp(j.getString("telp"));
+
+                iduser = j.getInt("id");
 
                 context.startActivity(new Intent(context, MainActivity.class));
                 Toast.makeText(context, "Login Berhasil", Toast.LENGTH_SHORT).show();

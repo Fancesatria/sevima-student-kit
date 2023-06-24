@@ -24,5 +24,10 @@ Route::prefix('pengguna')->group(function(){
     Route::get('/show/{id}', 'App\Http\Controllers\PenggunaController@show');
     Route::get('/del-auth/{id}', 'App\Http\Controllers\PenggunaController@destroy');
 
+
+    Route::post('/todo/add', 'App\Http\Controllers\NoteController@create');
+    Route::post('/todo/update/{id}', 'App\Http\Controllers\NoteController@update');
+    Route::get('/todo/delete/{id}', 'App\Http\Controllers\NoteController@destroy');
+    Route::get('/todo/index/{id}', 'App\Http\Controllers\NoteController@index');
     });
 

@@ -40,6 +40,20 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/signout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Sign Out"
+                android:textColor="@color/error"
+                android:textSize="20sp"/>
         </LinearLayout>
 
 
@@ -65,6 +79,7 @@
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="10dp"
+                android:onClick="notes"
                 app:cardElevation="5dp"
                 app:cardUseCompatPadding="true">
 
@@ -80,7 +95,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
                         android:layout_weight="1"
-                        android:text="To Do List"
+                        android:text="To Do List\nNotes"
                         android:textColor="@color/white"
                         android:textSize="24sp"
                         android:textStyle="bold" />

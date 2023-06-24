@@ -196,24 +196,17 @@ class PenggunaController extends Controller
         ->where('email',$email)->first();
 
         if(isset($user)){
-            if($user->status == 1){
-                if(Hash::check($password, $user->password)){ //password disandingkan apakah match
-                    // sendsms();
-                    return response()->json([
-                        'status'=>200,
-                        'data'=>$user
-                    ]);
+            if(Hash::check($password, $user->password)){ //password disandingkan apakah match
 
-                } else {
-                    return response()->json([
-                        'status'=>400,
-                        'data'=>''
-                    ]);
-                }
+                // sendsms();
+                return response()->json([
+                    'status'=>200,
+                    'data'=>$user
+                ]);
 
             } else {
                 return response()->json([
-                    'pesan'=>'Login tak dapat dilakukan karena akun diblokir',
+                    'status'=>400,
                     'data'=>''
                 ]);
             }
