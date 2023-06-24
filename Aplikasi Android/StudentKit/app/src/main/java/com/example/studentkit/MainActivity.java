@@ -55,4 +55,8 @@ public class MainActivity extends AppCompatActivity {
     public void notes(View view) {
         startActivity(new Intent(this, NotesActivity.class));
     }
+
+    public void quiz(View view) {
+        startActivity(new Intent(this, QuizActivity.class));
+    }
 }
