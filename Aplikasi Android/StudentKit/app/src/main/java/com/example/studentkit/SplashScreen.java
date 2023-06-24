@@ -23,7 +23,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //pengecekan
+        //checking login track
         SPHelper sp = new SPHelper(this);
         String token = sp.getToken();
 

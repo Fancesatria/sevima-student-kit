@@ -126,6 +126,44 @@ public class ConnHelper {
         return response;
     }
 
+    public Response postDataChat(JSONObject body){
+        Response response = new Response(404, "");
+
+        try{
+            URL url = new URL(urll);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            conn.setRequestProperty("Authorization","Bearer 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");
+            DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
+            dos.writeBytes(body.toString());
+            dos.flush();
+            dos.close();
+
+            conn.setReadTimeout(timeout);
+            conn.connect();
+//            Response to String
+
+            Reader in;
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while ((line = br.readLine()) != null){
+                sb.append(line+"\n");
+            }
+            response.data =sb.toString();
+            response.statusCode = conn.getResponseCode();
+            br.close();
+        } catch (Exception e){
+            Log.d("errorcon", e.getMessage());
+        }
+
+        return response;
+    }
+
     public Response postData(JSONObject body){
         Response response = new Response(404, "");
 
