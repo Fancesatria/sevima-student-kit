@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">StudentKit</string>
+    <string name="version">1.0</string>
+
+    <string name="deleted_success">Data deleted succesfully</string>
+    <string name="deleted_error">Data cannot be deleted</string>
+
+    <string name="saved">Data saved</string>
+    <string name="cant_access">Data Data cannot be accessed</string>
+    <string name="unsaved">Data cannot be saved</string>
+    <string name="unmatch">Password unmatch</string>
+    <string name="is_email">Please input a valid email</string>
+
+    <string name="pw_success">Password updated</string>
+    <string name="pw_failed">Password cannot be saved</string>
+    <string name="no_data">There is no data to show</string>
+
+    <string name="empty">Field cannot be empty</string>
+    <string name="del_ensure">Delete this item\?</string>
+    <string name="logout_ensure">Wanna logout and delete all data\?</string>
+    <string name="title_activity_detail_event">DetailEventActivity</string>
+</resources>
