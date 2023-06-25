@@ -37,7 +37,6 @@ public class ShowNotes extends AsyncTask<String, Void, Response> {
 
     @Override
     protected Response doInBackground(String... strings) {
-        SPHelper sp = new SPHelper(context);
         ConnHelper ch = new ConnHelper(url, context);
         return ch.getData();
     }
@@ -56,7 +55,7 @@ public class ShowNotes extends AsyncTask<String, Void, Response> {
                     JSONObject jsonObject = ja.getJSONObject(i);
 
 
-                    modelHomeList.add(new ModelNote(jsonObject.getString("title"), jsonObject.getString("description"), jsonObject.getInt("idpengguna")));
+                    modelHomeList.add(new ModelNote(jsonObject.getInt("id"), jsonObject.getString("title"), jsonObject.getString("description"), jsonObject.getInt("idpengguna")));
 
                 }
             } catch (JSONException e) {

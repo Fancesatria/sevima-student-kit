@@ -2,12 +2,14 @@ package com.example.studentkit.Note;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.studentkit.Model.ModelNote;
+import com.example.studentkit.NotesActivity;
 import com.example.studentkit.databinding.ItemNoteBinding;
 
 import java.util.ArrayList;
@@ -34,6 +36,13 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
         ModelNote mh = data.get(position);
         holder.bind.judulEvent.setText(mh.getTitle());
         holder.bind.deskripsi.setText(mh.getDescription());
+        holder.bind.cv.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                ((NotesActivity) context).deleteNote(String.valueOf(mh.getId()));
+                return false;
+            }
+        });
     }
 
     @Override

@@ -4,10 +4,11 @@ public class ModelNote {
     public String title, description, created_at;
     public int id, idpengguna;
 
-    public ModelNote(String title, String description, int idpengguna) {
+    public ModelNote(int id,String title, String description, int idpengguna) {
         this.title = title;
         this.description = description;
         this.idpengguna = idpengguna;
+        this.id = id;
     }
 
     public String getTitle() {
