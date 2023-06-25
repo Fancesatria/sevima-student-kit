@@ -1,3 +1,4 @@
+![Screenshot_20230624-163214_084331](https://github.com/Fancesatria/sevima-student-kit/assets/87270346/62be52b0-104f-4f6c-a49a-2c656b016c97)
 # sevima-student-kit 
 # hackathonsemesta2023
 
